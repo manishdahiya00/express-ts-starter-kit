@@ -1,0 +1,59 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Api for clientboard.tech",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r tsconfig-paths/register src/server.ts --env-file=.env",
+    "start": "node -r module-alias/register dist/server.js --env-file=.env",
+    "build": "tsc",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "api",
+    "clientboard"
+  ],
+  "author": "Manish Dahiya <manishdahiya0944@gmail.com>",
+  "license": "ISC",
+  "packageManager": "pnpm@10.16.1",
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "module-alias": "^2.2.3",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "eslint": "^9.36.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.10",
+    "prettier": "3.6.2",
+    "prisma": "^6.16.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.45.0"
+  },
+  "_moduleAliases": {
+    "@config": "dist/config",
+    "@middlewares": "dist/middlewares",
+    "@utils": "dist/utils",
+    "@routes": "dist/routes",
+    "@services": "dist/services",
+    "@root": "dist"
+  }
+}

@@ -1,0 +1,12 @@
+dist
+coverage
+tsconfig.json
+eslint.config.mjs
+package.json
+package-lock.json
+node_modules
+.env
+*.log
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.prettierrc
