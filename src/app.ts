@@ -25,7 +25,7 @@ export function createApp(): Express {
     app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
     app.use(cookieParser());
     app.use(rateLimiter);
-    app.use(requestLogger('Service Name'));
+    app.use(requestLogger('ClientBoard API'));
 
     // ====================
     // Routes
